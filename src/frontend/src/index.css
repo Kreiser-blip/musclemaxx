@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Satoshi:wght@300;400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --background: 0.05 0 0;
+    --foreground: 0.95 0.005 0;
+    --card: 0.09 0 0;
+    --card-foreground: 0.95 0.005 0;
+    --popover: 0.12 0 0;
+    --popover-foreground: 0.95 0.005 0;
+    --primary: 0.63 0.24 27;
+    --primary-foreground: 0.98 0 0;
+    --secondary: 0.14 0 0;
+    --secondary-foreground: 0.95 0.005 0;
+    --muted: 0.14 0 0;
+    --muted-foreground: 0.52 0.005 0;
+    --accent: 0.63 0.24 27;
+    --accent-foreground: 0.98 0 0;
+    --destructive: 0.58 0.22 27;
+    --destructive-foreground: 0.95 0 0;
+    --border: 0.2 0.005 0;
+    --input: 0.15 0 0;
+    --ring: 0.63 0.24 27;
+    --chart-1: 0.63 0.24 27;
+    --chart-2: 0.65 0.15 180;
+    --chart-3: 0.6 0.15 265;
+    --chart-4: 0.72 0.18 142;
+    --chart-5: 0.68 0.2 320;
+    --sidebar: 0.07 0 0;
+    --sidebar-foreground: 0.95 0.005 0;
+    --sidebar-primary: 0.63 0.24 27;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.14 0 0;
+    --sidebar-accent-foreground: 0.95 0.005 0;
+    --sidebar-border: 0.2 0.005 0;
+    --sidebar-ring: 0.63 0.24 27;
+  }
+
+  .light {
+    --background: 0.98 0 0;
+    --foreground: 0.12 0 0;
+    --card: 0.95 0 0;
+    --card-foreground: 0.12 0 0;
+    --popover: 0.97 0 0;
+    --popover-foreground: 0.12 0 0;
+    --primary: 0.63 0.24 27;
+    --primary-foreground: 0.98 0 0;
+    --secondary: 0.91 0 0;
+    --secondary-foreground: 0.12 0 0;
+    --muted: 0.92 0 0;
+    --muted-foreground: 0.45 0 0;
+    --accent: 0.63 0.24 27;
+    --accent-foreground: 0.98 0 0;
+    --destructive: 0.58 0.22 27;
+    --destructive-foreground: 0.98 0 0;
+    --border: 0.85 0 0;
+    --input: 0.88 0 0;
+    --ring: 0.63 0.24 27;
+    --sidebar: 0.94 0 0;
+    --sidebar-foreground: 0.12 0 0;
+    --sidebar-primary: 0.63 0.24 27;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.91 0 0;
+    --sidebar-accent-foreground: 0.12 0 0;
+    --sidebar-border: 0.85 0 0;
+    --sidebar-ring: 0.63 0.24 27;
+  }
+
+  * {
+    @apply border-border;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+
+  *::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .rank-glow {
+    box-shadow: 0 0 12px 2px var(--rank-color, transparent);
+  }
+  .rank-border {
+    border-color: var(--rank-color, transparent);
+  }
+  .primary-glow {
+    box-shadow: 0 0 32px oklch(0.63 0.24 27 / 0.25);
+  }
+  .primary-glow-lg {
+    box-shadow: 0 0 64px oklch(0.63 0.24 27 / 0.2), 0 0 24px
+      oklch(0.63 0.24 27 / 0.15);
+  }
+}
